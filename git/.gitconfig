@@ -1,0 +1,78 @@
+[user]
+	name = Antoine Froger
+	email = antfroger@gmail.com
+[color]
+	# Enable colors in color-supporting terminals
+	ui = auto
+[alias]
+	st = status
+	ci = commit
+	ds = diff --staged
+	pr = pull --rebase
+	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	loc = log --graph --decorate
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	l = log --date=short --pretty=format:"%h%x09%an%x09%ad%x09%s"
+	h = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	
+	oops = commit --amend --no-edit
+	review-local = "!git lg @{push}.."
+[core]
+	editor = vim
+	# Don't consider trailing space change as a cause for merge conflicts
+	whitespace = -trailing-space
+	excludesfile = ~/.gitignore
+	autocrlf = false
+	safecrlf = true
+[diff]
+	# Use better, descriptive initials (c, i, w) instead of a/b.
+	mnemonicPrefix = true
+	# Show renames/moves as such
+	renames = true
+	# When using --word-diff, assume --word-diff-regex=.
+	wordRegex = .
+	# Display submodule-related information (commit listings)
+	submodule = log
+[log]
+	# Use abbrev SHAs whenever possible/relevant instead of full 40 chars
+	abbrevCommit = true
+	# Automatically --follow when given a single path
+	follow = true
+[merge]
+	# Display common-ancestor blocks in conflict hunks
+	conflictStyle = diff3
+[mergetool]
+	# Clean up backup files created by merge tools on tool exit
+	keepBackup = false
+	# Clean up temp files created by merge tools on tool exit
+	keepTemporaries = false
+	# Put the temp files in a dedicated dir anyway
+	writeToTemp = true
+[pull]
+	rebase = preserve
+[push]
+	# Default push should only push the current branch to its push target, regardless of its remote name
+	default = upstream
+	# When pushing, also push tags whose commit-ishs are now reachable upstream
+	followTags = true
+[color "branch"]
+	# Blue on black is hard to read in git branch -vv: use cyan instead
+	upstream = cyan
+[tag]
+	# Sort tags as version numbers whenever applicable, so 1.10.2 is AFTER 1.2.0.
+	sort = version:refname
+[versionsort]
+	prereleaseSuffix = -pre
+	prereleaseSuffix = .pre
+	prereleaseSuffix = -beta
+	prereleaseSuffix = .beta
+	prereleaseSuffix = -rc
+	prereleaseSuffix = .rc
+[status]
+	showUntrackedFiles = all
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg1

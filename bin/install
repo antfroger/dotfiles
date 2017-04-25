@@ -55,6 +55,7 @@ function install_dir {
 
 link_file .zshrc ~
 link_file system ~/.system
+install_dir editorconfig ~
 install_dir git ~
 
 success "finished!"

@@ -72,7 +72,3 @@
 	prereleaseSuffix = .rc
 [status]
 	showUntrackedFiles = all
-[commit]
-	gpgsign = true
-[gpg]
-	program = gpg1

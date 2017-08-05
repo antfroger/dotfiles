@@ -51,7 +51,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew composer gem npm sublime symfony2 vagrant)
+plugins=(git brew composer gem npm sublime symfony2 vagrant composer)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -1,3 +1,5 @@
+alias refresh="source $HOME/.zshrc"
+
 # git + hub
 eval "$(hub alias -s)"
 

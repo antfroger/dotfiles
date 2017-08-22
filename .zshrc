@@ -76,7 +76,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Source dotfiles
-for DOTFILE in `find ./.system/`
+for DOTFILE in `find ~/.system/`
 do
   [ -f "$DOTFILE" ] && source "$DOTFILE"
 done

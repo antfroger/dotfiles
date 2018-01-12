@@ -1,4 +1,8 @@
 .DS_Store
 *.swp
-.idea/
 *~
+.idea/
+
+# Atom's go-debug file
+debug
+

@@ -2,6 +2,9 @@
 *.swp
 *~
 .idea/
+.vscode/
+
+coverage/
 
 # Atom's go-debug file
 debug

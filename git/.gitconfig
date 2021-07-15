@@ -51,7 +51,7 @@
 	# Put the temp files in a dedicated dir anyway
 	writeToTemp = true
 [pull]
-	rebase = preserve
+	rebase = true
 [push]
 	# Default push should only push the current branch to its push target, regardless of its remote name
 	default = upstream
